@@ -30,50 +30,86 @@ public class MainActivity extends AppCompatActivity {
         textViewOperacion.setText(simbolo);
     }
     public void operacionesSuma(View view) {
-        int valor1 = Integer.parseInt(Valor1.getText().toString());
-        int valor2 = Integer.parseInt(Valor2.getText().toString());
-        int operacion = valor1 + valor2;
-        String result = String.valueOf(operacion);
-        setSimbolo(view, "+");
-        resultado.setText(result);
+
+        String valor1 = Valor1.getText().toString();
+        String valor2 = Valor2.getText().toString();
+        if(valor1.equals("") || valor1.equals("-") ||
+                valor2.equals("") || valor2.equals("-")) {
+            Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
+        }else {
+            int val1 = Integer.parseInt(valor1);
+            int val2 = Integer.parseInt(valor2);
+            int operacion = val1 + val2;
+            String result = String.valueOf(operacion);
+            setSimbolo(view, "+");
+            resultado.setText(result);
+        }
     }
     public void operacionesResta(View view) {
-        int valor1 = Integer.parseInt(Valor1.getText().toString());
-        int valor2 = Integer.parseInt(Valor2.getText().toString());
-        int operacion = valor1 - valor2;
-        String result = String.valueOf(operacion);
-        setSimbolo(view, "-");
-        resultado.setText(result);
-    }
+        String valor1 = Valor1.getText().toString();
+        String valor2 = Valor2.getText().toString();
+        if(valor1.equals("") || valor1.equals("-") ||
+                valor2.equals("") || valor2.equals("-")) {
+            Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
+        }else {
+            int val1 = Integer.parseInt(valor1);
+            int val2 = Integer.parseInt(valor2);
+            int operacion = val1 - val2;
+            String result = String.valueOf(operacion);
+            setSimbolo(view, "-");
+            resultado.setText(result);
+        }
+        }
 
     public void operacionesProducto(View view) {
-        int valor1 = Integer.parseInt(Valor1.getText().toString());
-        int valor2 = Integer.parseInt(Valor2.getText().toString());
-        int operacion = valor1 * valor2;
-        String result = String.valueOf(operacion);
-        setSimbolo(view, "*");
-        resultado.setText(result);
+        String valor1 = Valor1.getText().toString();
+        String valor2 = Valor2.getText().toString();
+        if(valor1.equals("") || valor1.equals("-") ||
+                valor2.equals("") || valor2.equals("-")) {
+            Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
+        }else {
+            int val1 = Integer.parseInt(valor1);
+            int val2 = Integer.parseInt(valor2);
+            int operacion = val1 * val2;
+            String result = String.valueOf(operacion);
+            setSimbolo(view, "*");
+            resultado.setText(result);
+        }
     }
     public void operacionesDivision(View view) {
-        int valor1 = Integer.parseInt(Valor1.getText().toString());
-        int valor2 = Integer.parseInt(Valor2.getText().toString());
-        if(valor2 != 0) {
-            int operacion = valor1 / valor2;
-            String result = String.valueOf(operacion);
-            setSimbolo(view, "/");
-            resultado.setText(result);
-        }else{
-            Toast.makeText(this, "No se puede dividir por 0", Toast.LENGTH_SHORT).show();
+        String valor1 = Valor1.getText().toString();
+        String valor2 = Valor2.getText().toString();
+        if(valor1.equals("") || valor1.equals("-") ||
+                valor2.equals("") || valor2.equals("-")) {
+            Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
+        }else {
+            int val1 = Integer.parseInt(valor1);
+            int val2 = Integer.parseInt(valor2);
+            if (val2 != 0) {
+                int operacion = val1 / val2;
+                String result = String.valueOf(operacion);
+                setSimbolo(view, "/");
+                resultado.setText(result);
+            } else {
+                Toast.makeText(this, "No se puede dividir por 0", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
     public void operacionesModulo(View view) {
-        int valor1 = Integer.parseInt(Valor1.getText().toString());
-        int valor2 = Integer.parseInt(Valor2.getText().toString());
-        int operacion = valor1 % valor2;
-        String result = String.valueOf(operacion);
-        setSimbolo(view, "%");
-        resultado.setText(result);
+        String valor1 = Valor1.getText().toString();
+        String valor2 = Valor2.getText().toString();
+        if(valor1.equals("") || valor1.equals("-") ||
+                valor2.equals("") || valor2.equals("-")) {
+            Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
+        }else {
+            int val1 = Integer.parseInt(valor1);
+            int val2 = Integer.parseInt(valor2);
+            int operacion = val1 % val2;
+            String result = String.valueOf(operacion);
+            setSimbolo(view, "%");
+            resultado.setText(result);
+        }
     }
 
 
