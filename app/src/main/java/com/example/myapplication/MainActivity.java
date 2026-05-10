@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private EditText Valor1, Valor2;
     private TextView resultado;
@@ -52,9 +52,13 @@ public class MainActivity extends AppCompatActivity {
     public void operacionesDivision(View view) {
         int valor1 = Integer.parseInt(Valor1.getText().toString());
         int valor2 = Integer.parseInt(Valor2.getText().toString());
-        int operacion = valor1 / valor2;
-        String result = String.valueOf(operacion);
-        resultado.setText(result);
+        if(valor2 != 0) {
+            int operacion = valor1 / valor2;
+            String result = String.valueOf(operacion);
+            resultado.setText(result);
+        }else{
+            Toast.makeText(this, "No se puede dividir por 0", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
