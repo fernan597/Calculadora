@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 valor2.equals("") || valor2.equals("-")) {
             Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
         }else {
-            int val1 = Integer.parseInt(valor1);
-            int val2 = Integer.parseInt(valor2);
-            int operacion = val1 + val2;
+            double val1 = Double.parseDouble(valor1);
+            double val2 = Double.parseDouble(valor2);
+            double operacion = val1 + val2;
             String result = String.valueOf(operacion);
             setSimbolo(view, "+");
             resultado.setText(result);
@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 valor2.equals("") || valor2.equals("-")) {
             Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
         }else {
-            int val1 = Integer.parseInt(valor1);
-            int val2 = Integer.parseInt(valor2);
-            int operacion = val1 - val2;
+            double val1 = Double.parseDouble(valor1);
+            double val2 = Double.parseDouble(valor2);
+            double operacion = val1 - val2;
             String result = String.valueOf(operacion);
             setSimbolo(view, "-");
             resultado.setText(result);
@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 valor2.equals("") || valor2.equals("-")) {
             Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
         }else {
-            int val1 = Integer.parseInt(valor1);
-            int val2 = Integer.parseInt(valor2);
-            int operacion = val1 * val2;
+            double val1 = Double.parseDouble(valor1);
+            double val2 = Double.parseDouble(valor2);
+            double operacion = val1 * val2;
             String result = String.valueOf(operacion);
             setSimbolo(view, "*");
             resultado.setText(result);
@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
                 valor2.equals("") || valor2.equals("-")) {
             Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
         }else {
-            int val1 = Integer.parseInt(valor1);
-            int val2 = Integer.parseInt(valor2);
+            double val1 = Double.parseDouble(valor1);
+            double val2 = Double.parseDouble(valor2);
             if (val2 != 0) {
-                int operacion = val1 / val2;
+                double operacion = val1 / val2;
                 String result = String.valueOf(operacion);
                 setSimbolo(view, "/");
                 resultado.setText(result);
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 valor2.equals("") || valor2.equals("-")) {
             Toast.makeText(this, "Ingrese números válidos", Toast.LENGTH_SHORT).show();
         }else {
-            int val1 = Integer.parseInt(valor1);
-            int val2 = Integer.parseInt(valor2);
-            int operacion = val1 % val2;
+            double val1 = Double.parseDouble(valor1);
+            double val2 = Double.parseDouble(valor2);
+            double operacion = val1 % val2;
             String result = String.valueOf(operacion);
             setSimbolo(view, "%");
             resultado.setText(result);

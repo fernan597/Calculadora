@@ -79,7 +79,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -90,7 +90,7 @@
         android:layout_height="59dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.899"
