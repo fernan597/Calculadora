@@ -10,67 +10,77 @@
         android:id="@+id/buttonSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
+        android:layout_marginTop="88dp"
         android:onClick="operacionesSuma"
         android:text="Suma"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber3"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonModulo"
         app:layout_constraintEnd_toStartOf="@+id/buttonResta"
-        app:layout_constraintHorizontal_bias="0.331"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonResta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginEnd="48dp"
         android:onClick="operacionesResta"
         android:text="Resta"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/buttonModulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonModulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="184dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="168dp"
         android:onClick="operacionesModulo"
         android:text="Modulo"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+        app:layout_constraintVertical_bias="0.162" />
 
     <Button
         android:id="@+id/buttonProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:onClick="operacionesProducto"
         android:text="Producto"
         app:layout_constraintBottom_toTopOf="@+id/buttonSuma"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivision"
-        app:layout_constraintHorizontal_bias="0.325"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:onClick="operacionesDivision"
         android:text="Division"
         app:layout_constraintBottom_toTopOf="@+id/buttonResta"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,23 +88,29 @@
         android:id="@+id/editTextNumber2"
         android:layout_width="132dp"
         android:layout_height="59dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/editTextNumber3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="126dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -119,11 +135,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="="
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewOperacion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
